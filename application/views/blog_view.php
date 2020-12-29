@@ -126,7 +126,6 @@
 <!--	</tr>-->
 <!--</script>-->
 
-
 <script type="text/javascript">
 	$("#table tbody tr").click(function(){
 		var td = $(this).children();
