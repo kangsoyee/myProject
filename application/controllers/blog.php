@@ -89,4 +89,34 @@ class Blog extends CI_Controller{
 		$json_data = $this->table_model->gets(5, $offset, 'N');
 		echo json_encode($json_data);
 	}
+
+	function kakao(){
+		$this->load->library("kakao_login");
+		$result = $this->kakao_login->get_profile();
+		echo print_r($result);
+
+//		$code = $this->input->get('code');
+//		$app_key = "da0117784d27dd31f89ccfcbbf54f464";
+//		$redirect_uri = "http://www.kangse2942.com/blog/kakao";
+//
+//		$api_url = "https://kauth.kakao.com/oauth/token";
+//		$params = sprintf('grant_type=authorization_code&client_id=%s&redirect_uri=%s', $app_key, $redirect_uri, $code);
+//		$opts = array(
+//			CURLOPT_URL => $api_url,
+//			CURLOPT_SSL_VERIFYPEER => false,
+//			CURLOPT_POST => true,
+//			CURLOPT_POSTFIELDS => $params,
+//			CURLOPT_RETURNTRANSFER => true,
+//			CURLOPT_HEADER => false
+//		);
+//		$ch = curl_init();
+//		curl_setopt_array($ch, $opts);
+//		$result = curl_exec($ch);
+//		curl_close($ch);
+
+		//echo print_r($this->input->get('code'));
+	}
+	function kakao_info(){
+
+	}
 }

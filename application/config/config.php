@@ -525,3 +525,16 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+
+/*
+ * SOCIAL Setting
+ */
+
+$config['kakao_login']['client_id']     = "da0117784d27dd31f89ccfcbbf54f464";   // REST API 키를 입력
+$config['kakao_login']['client_secret'] = "";   // 카카오는 Client Secret을 사용하지 않습니다. 공백으로 지정
+$config['kakao_login']['redirect_uri']  = "http://www.kangse2942.com/blog/kakao";
+$config['kakao_login']['authorize_url'] = "https://kauth.kakao.com/oauth/authorize";
+$config['kakao_login']['token_url']     = "https://kauth.kakao.com/oauth/token";
+$config['kakao_login']['info_url']      = "https://kapi.kakao.com/v1/user/me";
+$config['kakao_login']['token_request_post'] = FALSE;
